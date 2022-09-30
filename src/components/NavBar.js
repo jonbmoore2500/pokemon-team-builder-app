@@ -7,7 +7,7 @@ function NavBar() {
         <div className="navBar">
             <NavLink to="/" exact>Home</NavLink>
             <NavLink to="/Explore" exact>Explore</NavLink>
-            <NavLink to="/BuildTeam" exact>Build a Team</NavLink>
+            <NavLink to="/BuildTeams" exact>Build a Team</NavLink>
             <NavLink to="/ViewTeams" exact>View Your Teams</NavLink>
         </div>
     )
