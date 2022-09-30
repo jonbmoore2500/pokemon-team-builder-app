@@ -1510,14 +1510,5 @@
         },
         "types": ["psychic"]
       }
-    ],
-    "teams": [
-      {
-        "id": 1,
-        "name": "sample",
-        "pokemonIds": {
-          
-        }
-      }
     ]
   }

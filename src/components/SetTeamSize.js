@@ -6,8 +6,8 @@ function SetTeamSize() {
     return (
         <div>
             <form>
-                <label>Change the team size?</label>
-                <select>
+                <label>Team size: </label>
+                <select defaultValue="6">
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
