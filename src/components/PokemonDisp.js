@@ -6,10 +6,12 @@ function PokemonDisp({pokemonArr}) {
 console.log(pokemonArr)
     return (
         <Container>
-            <h1>pokemondisp component</h1>
             {pokemonArr.map((pokemon) => (
             <PokemonCard key={pokemon.id} pokemonData={pokemon}/>
             ))}
+
+            {/* use state and a timer to switch between true and 
+            false, use to toggle front/back view for selected card */}
         </Container>
     )
 }

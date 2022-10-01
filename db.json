@@ -1212,7 +1212,7 @@
       },
       {
         "id": 122,
-        "name": "mr-mime",
+        "name": "Mr Mime",
         "hp": 40,
         "sprites": {
           "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png",
@@ -1509,6 +1509,74 @@
           "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/151.png"
         },
         "types": ["psychic"]
+      }
+    ],
+    "teams": [
+      {
+        "id": 1,
+        "name": "Jon's Favorite Team",
+        "pokemon": [
+          {
+            "id": 126,
+            "name": "magmar",
+            "hp": 65,
+            "sprites": {
+              "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/126.png",
+              "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/126.png"
+            },
+            "types": ["fire"]
+          },
+          {
+            "id": 44,
+            "name": "gloom",
+            "hp": 60,
+            "sprites": {
+              "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/44.png",
+              "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/44.png"
+            },
+            "types": ["grass", "poison"]
+          },
+          {
+            "id": 51,
+            "name": "dugtrio",
+            "hp": 35,
+            "sprites": {
+              "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/51.png",
+              "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/51.png"
+            },
+            "types": ["ground"]
+          },
+          {
+            "id": 144,
+            "name": "articuno",
+            "hp": 90,
+            "sprites": {
+              "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png",
+              "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/144.png"
+            },
+            "types": ["ice", "flying"]
+          },
+          {
+            "id": 120,
+            "name": "staryu",
+            "hp": 30,
+            "sprites": {
+              "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/120.png",
+              "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/120.png"
+            },
+            "types": ["water"]
+          },
+          {
+            "id": 109,
+            "name": "koffing",
+            "hp": 40,
+            "sprites": {
+              "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/109.png",
+              "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/109.png"
+            },
+            "types": ["poison"]
+          }
+        ]
       }
     ]
   }
