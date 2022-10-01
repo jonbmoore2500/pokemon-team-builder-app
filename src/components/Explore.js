@@ -1,11 +1,13 @@
 import React from "react"
+import PokemonDisp from "./PokemonDisp.js"
 
-function Explore() {
+function Explore({pokemonArr}) {
 
 
     return (
         <div>
-            <h1>this is my explore component</h1>
+            <h1>Learn about the available pokemon here</h1>
+            <PokemonDisp pokemonArr={pokemonArr}/>
         </div>
     )
 }

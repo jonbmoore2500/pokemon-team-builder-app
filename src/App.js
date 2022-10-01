@@ -8,10 +8,13 @@ import ViewTeams from "./components/ViewTeams.js"
 import './App.css';
 
 function App() {
+  const [pokemonArr, setPokemonArr] = useState([])
+  
+  
   useEffect(() => {
     fetch('http://localhost:3000/pokemon')
     .then(resp => resp.json())
-    .then(data => console.log(data))
+    .then(data => setPokemonArr(data))
   }, [])
   
   
@@ -23,7 +26,7 @@ function App() {
           <Home />
         </Route>
         <Route exact path="/Explore">
-          <Explore />
+          <Explore pokemonArr={pokemonArr}/>
         </Route>
         <Route exact path="/BuildTeams">
           <BuildTeams />
