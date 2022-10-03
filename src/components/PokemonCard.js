@@ -10,7 +10,8 @@ function PokemonCard({pokemonData, dispExtra, editable, onCardClick, onEditTeam}
         onCardClick()
     }
     function onSelectNew(newValue) {
-        onEditTeam(pokeName, newValue)
+        const oldValueId = pokemonData.id
+        onEditTeam(oldValueId, newValue)
     }
 
     
