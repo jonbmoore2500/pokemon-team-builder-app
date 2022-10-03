@@ -12,7 +12,7 @@ function ViewTeams() {
 
     return (
         <div>
-            <h1>this is my viewteams component</h1>
+            <h2>View and edit your teams here!</h2>
             {teamsArr.map((team) => (
                 <div key={team.id}>
                     <h3>{team.name}</h3>

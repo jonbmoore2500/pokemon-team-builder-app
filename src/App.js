@@ -5,6 +5,7 @@ import Home from "./components/Home.js"
 import Explore from "./components/Explore.js"
 import BuildTeams from "./components/BuildTeams.js"
 import ViewTeams from "./components/ViewTeams.js"
+import {PokemonContext} from "./contexts/PokemonContext.js"
 import './App.css';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
+      <PokemonContext.Provider value={{pokemonArr}}>
         <Route exact path="/Explore">
           <Explore pokemonArr={pokemonArr}/>
         </Route>
@@ -34,6 +36,7 @@ function App() {
         <Route exact path="/ViewTeams">
           <ViewTeams />
         </Route>
+      </PokemonContext.Provider>
       </Switch>
     </div>
   );

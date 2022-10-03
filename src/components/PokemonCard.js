@@ -3,16 +3,20 @@ import { Card } from "semantic-ui-react";
 import SubCard from "./SubCard.js"
 import Selector from "./Selector.js"
 
-function PokemonCard({pokemonData, dispExtra, editable, onCardClick}) {
+function PokemonCard({pokemonData, dispExtra, editable, onCardClick, onEditTeam}) {
     const pokeName = (pokemonData.name.charAt(0).toUpperCase() + pokemonData.name.slice(1))
     
     function handleClick() {
         onCardClick()
     }
+    function onSelectNew(newValue) {
+        onEditTeam(pokeName, newValue)
+    }
+
     
     return (
         <Card onClick={handleClick}>
-            <h1>{pokeName}</h1>
+            <h2>{pokeName}</h2>
             <img src={pokemonData.sprites.front} alt={pokeName} />
             {
             dispExtra ? 
@@ -21,7 +25,7 @@ function PokemonCard({pokemonData, dispExtra, editable, onCardClick}) {
             }
             {
             editable ?
-            <Selector /> :
+            <Selector onSelectNew={onSelectNew}/> :
             null    
             }
         </Card>
