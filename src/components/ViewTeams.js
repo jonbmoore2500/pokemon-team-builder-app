@@ -11,7 +11,6 @@ function ViewTeams() {
     }, [])
 
     function handleSaveEdits(updateTeam, teamId) {
-        console.log('viewteams', updateTeam, teamId)
         fetch(`http://localhost:3000/teams/${teamId}`, {
             method: "PATCH",
             headers: {
@@ -31,13 +30,29 @@ function ViewTeams() {
         })
     }
 
+    function deleteTeam(idToDelete) {
+        fetch(`http://localhost:3000/teams/${idToDelete}`, {
+            method: "DELETE"
+        })
+        .then(r => r.json())
+        .then(() => {
+            const newTeamsArr = teamsArr.filter(team => team.id !== idToDelete)
+            setTeamsArr(newTeamsArr)
+        })
+    }
+
     return (
         <div>
             <h2>View and edit your teams here!</h2>
             {teamsArr.map((team) => (
                 <div key={team.id}>
                     <h3>{team.name}</h3>
-                    <TeamDisp teamArr={team.pokemon} teamId={team.id} saveEdits={handleSaveEdits}/>
+                    <TeamDisp 
+                    teamArr={team.pokemon} 
+                    teamId={team.id} 
+                    saveEdits={handleSaveEdits}
+                    deleteTeam={deleteTeam}
+                    />
                 </div>
             ))}
         </div>

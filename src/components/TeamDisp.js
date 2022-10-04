@@ -3,13 +3,10 @@ import PokemonCard from "./PokemonCard"
 import { Container, Card } from "semantic-ui-react";
 import {PokemonContext} from "../contexts/PokemonContext.js"
 
-function TeamDisp({teamArr, saveEdits, teamId}) {
+function TeamDisp({teamArr, saveEdits, teamId, deleteTeam}) {
     const [newTeam, setNewTeam] = useState(teamArr)
     const {pokemonArr} = useContext(PokemonContext)
     
-    function handleCardClick() {
-        // console.log('ive been clicked')
-    }
     function handleSaveEdits() {
         saveEdits(newTeam, teamId)
         // take newTeam and the team arr, pass up to ViewTeams and patch
@@ -24,7 +21,8 @@ function TeamDisp({teamArr, saveEdits, teamId}) {
         })
         setNewTeam(updateTeam)
     }
-    function handleDeleteTeam(e) {
+    function handleDeleteTeam() {
+        deleteTeam(teamId)
     }
 
     return (
@@ -33,7 +31,6 @@ function TeamDisp({teamArr, saveEdits, teamId}) {
                 <PokemonCard 
                 key={member.name} 
                 pokemonData={member} 
-                onCardClick={handleCardClick} 
                 editable={true}
                 onEditTeam={handleNewPokemon}/>
             ))}
