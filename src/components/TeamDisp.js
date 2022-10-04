@@ -33,7 +33,6 @@ function TeamDisp({teamArr, saveEdits, teamId}) {
                 <PokemonCard 
                 key={member.name} 
                 pokemonData={member} 
-                dispExtra={true} 
                 onCardClick={handleCardClick} 
                 editable={true}
                 onEditTeam={handleNewPokemon}/>

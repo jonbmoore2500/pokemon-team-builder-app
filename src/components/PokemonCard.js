@@ -8,7 +8,9 @@ function PokemonCard({pokemonData, editable, onEditTeam}) {
     const [dispExtra, setDispExtra] = useState(false)
 
     function handleClick() {
-        setDispExtra(!dispExtra)
+        if (editable !== true) {
+            setDispExtra(!dispExtra)
+        }
     }
     function onSelectNew(newValue) {
         const oldValueId = pokemonData.id
