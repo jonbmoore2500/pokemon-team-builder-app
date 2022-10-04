@@ -3,11 +3,15 @@ import PokemonCard from "./PokemonCard.js"
 import { Container } from "semantic-ui-react";
 
 function PokemonDisp({pokemonArr}) {
-console.log(pokemonArr)
+    
+
     return (
         <Container>
             {pokemonArr.map((pokemon) => (
-            <PokemonCard key={pokemon.id} pokemonData={pokemon}/>
+            <PokemonCard 
+            key={pokemon.id} 
+            pokemonData={pokemon} 
+            />
             ))}
 
             {/* use state and a timer to switch between true and 
