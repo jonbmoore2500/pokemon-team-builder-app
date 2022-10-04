@@ -21,7 +21,7 @@ function PokemonCard({pokemonData, editable, onEditTeam}) {
     return (
         <Card onClick={handleClick}>
             <h2>{pokeName}</h2>
-            <img src={pokemonData.sprites.front} alt={pokeName} />
+            <img src={pokemonData.sprites.front} alt={pokeName} style={{width: 100}}/>
             {
             dispExtra ? 
             <SubCard pokemonData={pokemonData} /> :

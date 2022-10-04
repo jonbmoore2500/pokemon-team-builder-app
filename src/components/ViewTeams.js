@@ -51,6 +51,7 @@ function ViewTeams() {
                     teamArr={team.pokemon} 
                     teamId={team.id} 
                     saveEdits={handleSaveEdits}
+                    canDelete={true}
                     deleteTeam={deleteTeam}
                     />
                 </div>

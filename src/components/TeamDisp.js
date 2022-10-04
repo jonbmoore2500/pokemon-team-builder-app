@@ -3,7 +3,7 @@ import PokemonCard from "./PokemonCard"
 import { Container, Card } from "semantic-ui-react";
 import {PokemonContext} from "../contexts/PokemonContext.js"
 
-function TeamDisp({teamArr, saveEdits, teamId, deleteTeam}) {
+function TeamDisp({teamArr, saveEdits, teamId, deleteTeam, canDelete}) {
     const [newTeam, setNewTeam] = useState(teamArr)
     const {pokemonArr} = useContext(PokemonContext)
     
@@ -24,7 +24,7 @@ function TeamDisp({teamArr, saveEdits, teamId, deleteTeam}) {
     function handleDeleteTeam() {
         deleteTeam(teamId)
     }
-
+    
     return (
         <Card.Group itemsPerRow={3}>
             {newTeam.map((member) => (
@@ -35,7 +35,11 @@ function TeamDisp({teamArr, saveEdits, teamId, deleteTeam}) {
                 onEditTeam={handleNewPokemon}/>
             ))}
             <button onClick={handleSaveEdits}>Save changes?</button>
-            <button onClick={handleDeleteTeam}>Delete this team?</button>
+            {
+            canDelete ? 
+            <button onClick={handleDeleteTeam}>Delete this team?</button> :
+            null
+            }
         </Card.Group>    
     )
 }
