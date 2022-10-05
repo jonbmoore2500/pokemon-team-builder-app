@@ -16,27 +16,27 @@ function BuildTeams() {
     
     
     const blankTeam = [
-        {"id": 1,
+        {"id": 'a',
          "name": "Choose your first Pokemon",
          "sprites": {"front": PokeBall}
         },
-        {"id": 2,
+        {"id": 'b',
          "name": "Choose your second Pokemon",
          "sprites": {"front": PokeBall}
         },
-        {"id": 3,
+        {"id": 'c',
          "name": "Choose your third Pokemon",
          "sprites": {"front": PokeBall}
         },
-        {"id": 4,
+        {"id": 'd',
          "name": "Choose your fourth Pokemon",
          "sprites": {"front": PokeBall}
         },
-        {"id": 5,
+        {"id": 'e',
          "name": "Choose your fifth Pokemon",
          "sprites": {"front": PokeBall}
         },
-        {"id": 6,
+        {"id": 'f',
          "name": "Choose your sixth Pokemon",
          "sprites": {"front": PokeBall}
         }
