@@ -5,7 +5,11 @@ function Selector({onSelectNew}) {
     const {pokemonArr} = useContext(PokemonContext)
     
     function handleOnChange(e) {
-        onSelectNew(e.target.value)
+        // creates placeholder, prevents placeholder from being used as value
+        if (e.target.value.slice(-1) !== '!') {
+            onSelectNew(e.target.value)
+        }    
+        
     }
     
 
@@ -16,8 +20,9 @@ function Selector({onSelectNew}) {
             <label>
                 <h3>Choose a pokemon:</h3>
                 <select onChange={handleOnChange}>
+                    <option id="placeholder">Choose a pokemon!</option>
                     {pokemonArr.map((pokemon) => (
-                        <option key={pokemon.name + pokemon.id} value={pokemon.name}>
+                        <option key={pokemon.name} value={pokemon.name}>
                          {pokemon.name}
                         </option>
                     ))}

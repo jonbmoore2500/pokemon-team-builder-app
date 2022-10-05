@@ -9,12 +9,14 @@ function BuildTeams() {
     }
     function handleSaveTeam(newTeamArr) {
         if (
+            // checks to make sure all 6 slots are filled by actual pokemon and not placeholders
             (newTeamArr.filter(pokemon => typeof pokemon.id !== 'string').length === 6) &&
+            // checks to make sure a name has been entered, name cannot be blank
             (teamName.length >= 1)
         ) {
             // fetch()
         } 
-        // use newTeamArr with team name (check if name is string of length >= 1, fetch POST. use history to go to TeamDisp?)
+        // use history to take user to TeamDisp?
     }
     
     
