@@ -18,7 +18,6 @@ function App() {
     .then(data => setPokemonArr(data))
   }, [])
   
-  
   return (
     <div className="App">
       <Header />
@@ -28,7 +27,7 @@ function App() {
         </Route>
       <PokemonContext.Provider value={{pokemonArr}}>
         <Route exact path="/Explore">
-          <Explore pokemonArr={pokemonArr}/>
+          <Explore />
         </Route>
         <Route exact path="/BuildTeams">
           <BuildTeams />

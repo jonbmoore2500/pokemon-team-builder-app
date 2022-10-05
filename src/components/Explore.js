@@ -1,8 +1,9 @@
-import React from "react"
+import React, {useContext} from "react"
 import PokemonDisp from "./PokemonDisp.js"
+import {PokemonContext} from "../contexts/PokemonContext.js"
 
-function Explore({pokemonArr}) {
-
+function Explore() {
+    const {pokemonArr} = useContext(PokemonContext)
 
     return (
         <div>

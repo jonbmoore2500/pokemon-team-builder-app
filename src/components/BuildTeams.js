@@ -29,6 +29,7 @@ function BuildTeams() {
             .then(data => console.log(data))
         } 
         // use history to take user to TeamDisp?
+        // reset form?
     }
     
     
