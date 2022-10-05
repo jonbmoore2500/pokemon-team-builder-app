@@ -2040,6 +2040,89 @@
           ]
         }
       ]
+    },
+    {
+      "name": "New Team???",
+      "pokemon": [
+        {
+          "id": 1,
+          "name": "bulbasaur",
+          "hp": "40",
+          "sprites": {
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png"
+          },
+          "types": [
+            "grass",
+            "poison"
+          ]
+        },
+        {
+          "id": 2,
+          "name": "ivysaur",
+          "hp": 60,
+          "sprites": {
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/2.png"
+          },
+          "types": [
+            "grass",
+            "poison"
+          ]
+        },
+        {
+          "id": 17,
+          "name": "pidgeotto",
+          "hp": 63,
+          "sprites": {
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/17.png"
+          },
+          "types": [
+            "normal",
+            "flying"
+          ]
+        },
+        {
+          "id": 144,
+          "name": "articuno",
+          "hp": 90,
+          "sprites": {
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/144.png"
+          },
+          "types": [
+            "ice",
+            "flying"
+          ]
+        },
+        {
+          "id": 145,
+          "name": "zapdos",
+          "hp": 90,
+          "sprites": {
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/145.png"
+          },
+          "types": [
+            "electric",
+            "flying"
+          ]
+        },
+        {
+          "id": 37,
+          "name": "vulpix",
+          "hp": 38,
+          "sprites": {
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/37.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/37.png"
+          },
+          "types": [
+            "fire"
+          ]
+        }
+      ],
+      "id": 3
     }
   ]
 }

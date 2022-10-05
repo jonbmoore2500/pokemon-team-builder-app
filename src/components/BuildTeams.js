@@ -14,7 +14,19 @@ function BuildTeams() {
             // checks to make sure a name has been entered, name cannot be blank
             (teamName.length >= 1)
         ) {
-            // fetch()
+            const newPokeObj = {
+                "name": teamName,
+                "pokemon": newTeamArr
+            }
+            fetch('http://localhost:3000/teams', {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(newPokeObj)
+            })
+            .then(r => r.json())
+            .then(data => console.log(data))
         } 
         // use history to take user to TeamDisp?
     }
