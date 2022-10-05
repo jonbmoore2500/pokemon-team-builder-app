@@ -1,5 +1,4 @@
 import React, {useState} from "react"
-// import NewTeamContainer from "./NewTeamContainer"
 import TeamDisp from "./TeamDisp"
 import PokeBall from "../pokeball.png"
 
@@ -9,7 +8,13 @@ function BuildTeams() {
         setTeamName(e.target.value)
     }
     function handleSaveTeam(newTeamArr) {
-        console.log(newTeamArr)
+        if (
+            (newTeamArr.filter(pokemon => typeof pokemon.id !== 'string').length === 6) &&
+            (teamName.length >= 1)
+        ) {
+            // fetch()
+        } 
+        // use newTeamArr with team name (check if name is string of length >= 1, fetch POST. use history to go to TeamDisp?)
     }
     
     
