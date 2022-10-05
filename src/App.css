@@ -8,21 +8,17 @@
   
 }
 
+.pokemonpic{
+  max-width: 150px
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.pokeCard{
+  width: 25%;
+  border: 2px;
+  border-style: solid;
+  border-color: red;
+  background-color: lightblue
+}
 
 
 
