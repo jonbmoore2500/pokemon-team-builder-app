@@ -1,9 +1,12 @@
-import React, {useState} from "react"
+import React, {useState, useContext} from "react"
 import TeamDisp from "./TeamDisp"
 import PokeBall from "../pokeball.png"
+import {TeamSizeContext} from "../contexts/PokemonContext.js"
 
 function BuildTeams() {
     const [teamName, setTeamName] = useState('')
+    const {teamSize} = useContext(TeamSizeContext)
+    
     function handleNewName(e) {
         setTeamName(e.target.value)
     }
@@ -35,7 +38,7 @@ function BuildTeams() {
     
     
     
-    const blankTeam = [
+    const templateBlankTeam = [
         {"id": 'a',
          "name": "Choose your first Pokemon",
          "sprites": {"front": PokeBall}
@@ -59,9 +62,27 @@ function BuildTeams() {
         {"id": 'f',
          "name": "Choose your sixth Pokemon",
          "sprites": {"front": PokeBall}
+        },
+        {"id": 'g',
+         "name": "Choose your seventh Pokemon",
+         "sprites": {"front": PokeBall}
+        },
+        {"id": 'h',
+         "name": "Choose your eighth Pokemon",
+         "sprites": {"front": PokeBall}
+        },
+        {"id": 'i',
+         "name": "Choose your ninth Pokemon",
+         "sprites": {"front": PokeBall}
+        },
+        {"id": 'j',
+         "name": "Choose your tenth Pokemon",
+         "sprites": {"front": PokeBall}
         }
     ]
 
+    const blankTeam = templateBlankTeam.slice(0, teamSize)
+    console.log(blankTeam)
     
     return (
         <div>

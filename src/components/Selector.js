@@ -12,7 +12,7 @@ function Selector({onSelectNew}) {
         
     }
     
-
+// need to prevent duplicates
 
     return (
         <div>

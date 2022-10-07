@@ -2,7 +2,12 @@ import React from "react"
 import SetTeamSize from "./SetTeamSize.js"
 import ProfOak from "../ProfessorOak.jpg"
 
-function Home() {
+function Home({handleSetSize}) {
+
+
+    function onSetSize(teamSize){
+        handleSetSize(teamSize)
+    }
 
     return (
         <div>
@@ -22,7 +27,7 @@ function Home() {
                 <p> 
                     What would you like your team size to be?
                 </p>
-                <SetTeamSize />
+                <SetTeamSize onSetSize={onSetSize}/>
             </div>
         </div>
     )

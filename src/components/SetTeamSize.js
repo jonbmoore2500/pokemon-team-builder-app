@@ -1,11 +1,13 @@
 import React from "react"
 
-function SetTeamSize() {
+function SetTeamSize({onSetSize}) {
 
-
+    function handleSetSize(e) {
+        onSetSize(e.target.value)
+    }
     return (
         <div>
-            <form>
+            <form onChange={handleSetSize}>
                 <label>Team size: </label>
                 <select defaultValue="6">
                     <option value="3">3</option>
