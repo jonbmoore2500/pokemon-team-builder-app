@@ -12,7 +12,7 @@ function Selector({onSelectNew}) {
         
     }
     
-// need to prevent duplicates
+// need to prevent duplicates either here or in function in TeamDisp
 
     return (
         <div>

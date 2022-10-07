@@ -9,9 +9,10 @@ function TeamDisp({teamArr, saveEdits, teamId, deleteTeam, canDelete}) {
     
     function handleSaveEdits() {
         saveEdits(newTeam, teamId)
-        // take newTeam and the team arr, pass up to ViewTeams and patch
     }
     function handleNewPokemon(toReplaceId, replaceName) {
+        // currently doesn't work with duplicates in team, need to either prevent adding duplicates or get rid of issue
+        // is there a way to identify which array element is being changed? would allow to edit specific element and not find one with matching name
         const newPokeObj = pokemonArr.filter(pokemon => pokemon.name === replaceName)
         const updateTeam = newTeam.map((member) => {
             if (member.id === toReplaceId) {
@@ -29,7 +30,7 @@ function TeamDisp({teamArr, saveEdits, teamId, deleteTeam, canDelete}) {
         <Card.Group itemsPerRow={3}>
             {newTeam.map((member) => (
                 <PokemonCard 
-                key={member.name} 
+                key={member.id} 
                 pokemonData={member} 
                 editable={true}
                 onEditTeam={handleNewPokemon}/>

@@ -17,7 +17,6 @@ function PokemonCard({pokemonData, editable, onEditTeam}) {
         const oldValueId = pokemonData.id
         onEditTeam(oldValueId, newValue)
     }
-
     
     return (
         <Card onClick={handleClick} >

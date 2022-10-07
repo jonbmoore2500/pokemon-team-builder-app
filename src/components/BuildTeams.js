@@ -32,58 +32,25 @@ function BuildTeams() {
             })
             .then(r => r.json())
             .then(data => {
-                console.log(data)
+                // console.log(data)
                 history.push("/ViewTeams")
             })
         } 
     }
-    
-    
-    
-    
+    // creates template for blank team with all 10 spots
     const templateBlankTeam = [
-        {"id": 'a',
-         "name": "Choose your first Pokemon",
-         "sprites": {"front": PokeBall}
-        },
-        {"id": 'b',
-         "name": "Choose your second Pokemon",
-         "sprites": {"front": PokeBall}
-        },
-        {"id": 'c',
-         "name": "Choose your third Pokemon",
-         "sprites": {"front": PokeBall}
-        },
-        {"id": 'd',
-         "name": "Choose your fourth Pokemon",
-         "sprites": {"front": PokeBall}
-        },
-        {"id": 'e',
-         "name": "Choose your fifth Pokemon",
-         "sprites": {"front": PokeBall}
-        },
-        {"id": 'f',
-         "name": "Choose your sixth Pokemon",
-         "sprites": {"front": PokeBall}
-        },
-        {"id": 'g',
-         "name": "Choose your seventh Pokemon",
-         "sprites": {"front": PokeBall}
-        },
-        {"id": 'h',
-         "name": "Choose your eighth Pokemon",
-         "sprites": {"front": PokeBall}
-        },
-        {"id": 'i',
-         "name": "Choose your ninth Pokemon",
-         "sprites": {"front": PokeBall}
-        },
-        {"id": 'j',
-         "name": "Choose your tenth Pokemon",
-         "sprites": {"front": PokeBall}
-        }
+        {"id": 'a', "name": "Choose your first Pokemon", "sprites": {"front": PokeBall}},
+        {"id": 'b', "name": "Choose your second Pokemon", "sprites": {"front": PokeBall}},
+        {"id": 'c', "name": "Choose your third Pokemon", "sprites": {"front": PokeBall}},
+        {"id": 'd', "name": "Choose your fourth Pokemon", "sprites": {"front": PokeBall}},
+        {"id": 'e', "name": "Choose your fifth Pokemon", "sprites": {"front": PokeBall}},
+        {"id": 'f', "name": "Choose your sixth Pokemon", "sprites": {"front": PokeBall}},
+        {"id": 'g', "name": "Choose your seventh Pokemon", "sprites": {"front": PokeBall}},
+        {"id": 'h', "name": "Choose your eighth Pokemon", "sprites": {"front": PokeBall}},
+        {"id": 'i', "name": "Choose your ninth Pokemon", "sprites": {"front": PokeBall}},
+        {"id": 'j', "name": "Choose your tenth Pokemon", "sprites": {"front": PokeBall}}
     ]
-
+    // sets blankTeam to match teamSize, pass to TeamDisp component
     const blankTeam = templateBlankTeam.slice(0, teamSize)
     
     return (
