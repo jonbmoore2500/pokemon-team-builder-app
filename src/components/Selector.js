@@ -13,10 +13,10 @@ function Selector({onSelectNew}) {
     }
     
 // need to prevent duplicates either here or in function in TeamDisp
+// only display selector on click?
 
     return (
         <div>
-            <h1>selector</h1>
             <label>
                 <h3>Choose a pokemon:</h3>
                 <select onChange={handleOnChange}>

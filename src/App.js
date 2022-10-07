@@ -25,26 +25,27 @@ function App() {
     setTeamSize(newSize)
   }
 
+  // can incorporate different Context.Providers together?
   return (
     <div className="App">
       <Header />
       <Switch>
-      <TeamSizeContext.Provider value={{teamSize}}>
-      <PokemonContext.Provider value={{pokemonArr}}>
-        <Route exact path="/">
-          <Home handleSetSize={handleSetSize}/>
-        </Route>
-        <Route exact path="/Explore">
-          <Explore />
-        </Route>
-        <Route exact path="/BuildTeams">
-          <BuildTeams />
-        </Route>
-        <Route exact path="/ViewTeams">
-          <ViewTeams />
-        </Route>
-      </PokemonContext.Provider>
-      </TeamSizeContext.Provider>
+        <TeamSizeContext.Provider value={{teamSize}}>
+        <PokemonContext.Provider value={{pokemonArr}}>
+          <Route exact path="/">
+            <Home handleSetSize={handleSetSize}/>
+          </Route>
+          <Route exact path="/Explore">
+            <Explore />
+          </Route>
+          <Route exact path="/BuildTeams">
+            <BuildTeams />
+          </Route>
+          <Route exact path="/ViewTeams">
+            <ViewTeams />
+          </Route>
+        </PokemonContext.Provider>
+        </TeamSizeContext.Provider>
       </Switch>
     </div>
   );

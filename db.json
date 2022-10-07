@@ -2042,102 +2042,18 @@
       ]
     },
     {
-      "name": "New Team???",
-      "pokemon": [
-        {
-          "id": 1,
-          "name": "bulbasaur",
-          "hp": "40",
-          "sprites": {
-            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
-            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png"
-          },
-          "types": [
-            "grass",
-            "poison"
-          ]
-        },
-        {
-          "id": 2,
-          "name": "ivysaur",
-          "hp": 60,
-          "sprites": {
-            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
-            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/2.png"
-          },
-          "types": [
-            "grass",
-            "poison"
-          ]
-        },
-        {
-          "id": 17,
-          "name": "pidgeotto",
-          "hp": 63,
-          "sprites": {
-            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png",
-            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/17.png"
-          },
-          "types": [
-            "normal",
-            "flying"
-          ]
-        },
-        {
-          "id": 144,
-          "name": "articuno",
-          "hp": 90,
-          "sprites": {
-            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png",
-            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/144.png"
-          },
-          "types": [
-            "ice",
-            "flying"
-          ]
-        },
-        {
-          "id": 145,
-          "name": "zapdos",
-          "hp": 90,
-          "sprites": {
-            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png",
-            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/145.png"
-          },
-          "types": [
-            "electric",
-            "flying"
-          ]
-        },
-        {
-          "id": 37,
-          "name": "vulpix",
-          "hp": 38,
-          "sprites": {
-            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/37.png",
-            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/37.png"
-          },
-          "types": [
-            "fire"
-          ]
-        }
-      ],
-      "id": 3
-    },
-    {
       "name": "haha, yes!",
       "pokemon": [
         {
-          "id": 3,
-          "name": "venusaur",
-          "hp": 80,
+          "id": 10,
+          "name": "caterpie",
+          "hp": 45,
           "sprites": {
-            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
-            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/3.png"
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/10.png"
           },
           "types": [
-            "grass",
-            "poison"
+            "bug"
           ]
         },
         {
@@ -2167,6 +2083,48 @@
         }
       ],
       "id": 4
+    },
+    {
+      "name": "Blue",
+      "pokemon": [
+        {
+          "id": 7,
+          "name": "squirtle",
+          "hp": 44,
+          "sprites": {
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/7.png"
+          },
+          "types": [
+            "water"
+          ]
+        },
+        {
+          "id": 29,
+          "name": "nidoran-f",
+          "hp": 55,
+          "sprites": {
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/29.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/29.png"
+          },
+          "types": [
+            "poison"
+          ]
+        },
+        {
+          "id": 147,
+          "name": "dratini",
+          "hp": 41,
+          "sprites": {
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/147.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/147.png"
+          },
+          "types": [
+            "dragon"
+          ]
+        }
+      ],
+      "id": 5
     }
   ]
 }

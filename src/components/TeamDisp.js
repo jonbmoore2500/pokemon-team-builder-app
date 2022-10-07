@@ -28,9 +28,10 @@ function TeamDisp({teamArr, saveEdits, teamId, deleteTeam, canDelete}) {
     
     return (
         <Card.Group itemsPerRow={3}>
-            {newTeam.map((member) => (
+            {newTeam.map((member, index) => (
                 <PokemonCard 
-                key={member.id} 
+                key={member.name + index} 
+                placeholder={member.name + index}
                 pokemonData={member} 
                 editable={true}
                 onEditTeam={handleNewPokemon}/>

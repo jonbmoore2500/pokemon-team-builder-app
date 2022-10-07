@@ -4,10 +4,10 @@ import SubCard from "./SubCard.js"
 import Selector from "./Selector.js"
 import '../App.css';
 
-function PokemonCard({pokemonData, editable, onEditTeam}) {
+function PokemonCard({pokemonData, editable, onEditTeam, placeholder}) {
     const pokeName = (pokemonData.name.charAt(0).toUpperCase() + pokemonData.name.slice(1))
     const [dispExtra, setDispExtra] = useState(false)
-
+    console.log(placeholder)
     function handleClick() {
         if (editable !== true) {
             setDispExtra(!dispExtra)
