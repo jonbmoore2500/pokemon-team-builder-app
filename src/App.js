@@ -6,19 +6,21 @@ import Explore from "./components/Explore.js"
 import BuildTeams from "./components/BuildTeams.js"
 import ViewTeams from "./components/ViewTeams.js"
 import {PokemonContext, TeamSizeContext} from "./contexts/PokemonContext.js"
-// import {TeamSizeContext} from "./contexts/TeamSizeContext.js"
 import './App.css';
 
 function App() {
+  // set base pokemon array, team size, for use by Context
   const [pokemonArr, setPokemonArr] = useState([])
   const [teamSize, setTeamSize] = useState(6)
   
+  // fetch pokemon, assign to pokemonArr with state
   useEffect(() => {
     fetch('http://localhost:3000/pokemon')
     .then(resp => resp.json())
     .then(data => setPokemonArr(data))
   }, [])
   
+  // take newSize from Home component, set teamSize with state
   function handleSetSize(newSize) {
     setTeamSize(newSize)
   }

@@ -2123,6 +2123,50 @@
         }
       ],
       "id": 3
+    },
+    {
+      "name": "haha, yes!",
+      "pokemon": [
+        {
+          "id": 3,
+          "name": "venusaur",
+          "hp": 80,
+          "sprites": {
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/3.png"
+          },
+          "types": [
+            "grass",
+            "poison"
+          ]
+        },
+        {
+          "id": 5,
+          "name": "charmeleon",
+          "hp": 58,
+          "sprites": {
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/5.png"
+          },
+          "types": [
+            "fire"
+          ]
+        },
+        {
+          "id": 34,
+          "name": "nidoking",
+          "hp": 81,
+          "sprites": {
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/34.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/34.png"
+          },
+          "types": [
+            "poison",
+            "ground"
+          ]
+        }
+      ],
+      "id": 4
     }
   ]
 }

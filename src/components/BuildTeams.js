@@ -1,4 +1,5 @@
 import React, {useState, useContext} from "react"
+import {useHistory} from "react-router-dom"
 import TeamDisp from "./TeamDisp"
 import PokeBall from "../pokeball.png"
 import {TeamSizeContext} from "../contexts/PokemonContext.js"
@@ -6,6 +7,7 @@ import {TeamSizeContext} from "../contexts/PokemonContext.js"
 function BuildTeams() {
     const [teamName, setTeamName] = useState('')
     const {teamSize} = useContext(TeamSizeContext)
+    let history = useHistory()
     
     function handleNewName(e) {
         setTeamName(e.target.value)
@@ -13,7 +15,7 @@ function BuildTeams() {
     function handleSaveTeam(newTeamArr) {
         if (
             // checks to make sure all 6 slots are filled by actual pokemon and not placeholders
-            (newTeamArr.filter(pokemon => typeof pokemon.id !== 'string').length === 6) &&
+            (newTeamArr.filter(pokemon => typeof pokemon.id !== 'string').length == teamSize) &&
             // checks to make sure a name has been entered, name cannot be blank
             (teamName.length >= 1)
         ) {
@@ -29,10 +31,11 @@ function BuildTeams() {
                 body: JSON.stringify(newPokeObj)
             })
             .then(r => r.json())
-            .then(data => console.log(data))
+            .then(data => {
+                console.log(data)
+                history.push("/ViewTeams")
+            })
         } 
-        // use history to take user to TeamDisp?
-        // reset form?
     }
     
     
@@ -82,7 +85,6 @@ function BuildTeams() {
     ]
 
     const blankTeam = templateBlankTeam.slice(0, teamSize)
-    console.log(blankTeam)
     
     return (
         <div>
