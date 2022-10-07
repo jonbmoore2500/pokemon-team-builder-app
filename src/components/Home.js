@@ -1,9 +1,10 @@
-import React from "react"
+import React, {useContext} from "react"
 import SetTeamSize from "./SetTeamSize.js"
 import ProfOak from "../ProfessorOak.jpg"
+import {TeamSizeContext} from "../contexts/PokemonContext.js"
 
 function Home({handleSetSize}) {
-
+    const {teamSize} = useContext(TeamSizeContext)
 
     function onSetSize(teamSize){
         handleSetSize(teamSize)
@@ -22,12 +23,12 @@ function Home({handleSetSize}) {
                     they could all be the same type, or you could just like them! Whatever your reason for 
                     choosing a group of Pokemon, you can set a team, give it a name, and save it to use or 
                     change later. The typical group size is 6, but you can change it to be as low as 3 or 
-                    as high as 10. Keep in mind that once you choose a team size you can't change it!
+                    as high as 10. 
                 </p> 
                 <p> 
-                    What would you like your team size to be?
+                    What would you like your team size to be? It's currently {teamSize}.
                 </p>
-                <SetTeamSize onSetSize={onSetSize}/>
+                <SetTeamSize onSetSize={onSetSize} teamSize={teamSize}/>
             </div>
         </div>
     )

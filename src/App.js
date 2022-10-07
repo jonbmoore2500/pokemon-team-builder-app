@@ -27,22 +27,22 @@ function App() {
     <div className="App">
       <Header />
       <Switch>
+      <TeamSizeContext.Provider value={{teamSize}}>
+      <PokemonContext.Provider value={{pokemonArr}}>
         <Route exact path="/">
           <Home handleSetSize={handleSetSize}/>
         </Route>
-      <PokemonContext.Provider value={{pokemonArr}}>
         <Route exact path="/Explore">
           <Explore />
         </Route>
-          <TeamSizeContext.Provider value={{teamSize}}>
-            <Route exact path="/BuildTeams">
-              <BuildTeams />
-            </Route>
-          </TeamSizeContext.Provider>
+        <Route exact path="/BuildTeams">
+          <BuildTeams />
+        </Route>
         <Route exact path="/ViewTeams">
           <ViewTeams />
         </Route>
       </PokemonContext.Provider>
+      </TeamSizeContext.Provider>
       </Switch>
     </div>
   );
