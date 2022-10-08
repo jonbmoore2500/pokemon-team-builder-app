@@ -2125,6 +2125,50 @@
         }
       ],
       "id": 5
+    },
+    {
+      "name": "Lexasaurus",
+      "pokemon": [
+        {
+          "id": 10,
+          "name": "caterpie",
+          "hp": 45,
+          "sprites": {
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/10.png"
+          },
+          "types": [
+            "bug"
+          ]
+        },
+        {
+          "id": 2,
+          "name": "ivysaur",
+          "hp": 60,
+          "sprites": {
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/2.png"
+          },
+          "types": [
+            "grass",
+            "poison"
+          ]
+        },
+        {
+          "id": 31,
+          "name": "nidoqueen",
+          "hp": 90,
+          "sprites": {
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/31.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/31.png"
+          },
+          "types": [
+            "poison",
+            "ground"
+          ]
+        }
+      ],
+      "id": 6
     }
   ]
 }
