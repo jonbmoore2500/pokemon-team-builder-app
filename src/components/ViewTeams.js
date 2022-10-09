@@ -42,7 +42,7 @@ function ViewTeams() {
     }
 
     return (
-        <div className="ui container">
+        <Container>
             <h2>View and edit your teams here!</h2>
             {teamsArr.map((team) => (
                 <div key={team.id}>
@@ -56,7 +56,7 @@ function ViewTeams() {
                     />
                 </div>
             ))}
-        </div>
+        </Container>
     )
 }
 

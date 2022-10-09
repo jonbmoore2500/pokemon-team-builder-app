@@ -18,8 +18,8 @@ function PokemonCard({pokemonData, editable, onEditTeam, index}) {
     }
     
     return (
-        <div className="ui card">
-            <div className="column pokeCard"  onClick={handleClick}>
+        <Card>
+            <div onClick={handleClick}>
                 <h2>{pokeName}</h2>
                 <img src={pokemonData.sprites.front} alt={pokeName} className={'pokemonpic'}/>
                 {
@@ -33,7 +33,7 @@ function PokemonCard({pokemonData, editable, onEditTeam, index}) {
                 null    
                 }
             </div>    
-        </div>
+        </Card>
     )
 }
 

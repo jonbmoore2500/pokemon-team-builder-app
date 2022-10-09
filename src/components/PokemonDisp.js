@@ -7,14 +7,14 @@ function PokemonDisp({pokemonArr}) {
 {/* use state and a timer to switch between true and 
 false, use to toggle front/back view for selected card */}
     return (
-        <div className="ui three cards">
+        <Card.Group itemsPerRow={6}>
             {pokemonArr.map((pokemon) => (
             <PokemonCard 
             key={pokemon.id} 
             pokemonData={pokemon} 
             />
             ))}
-        </div>
+        </Card.Group>
     )
 }
 

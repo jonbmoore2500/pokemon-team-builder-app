@@ -25,7 +25,7 @@ function TeamDisp({teamArr, saveEdits, teamId, deleteTeam, canDelete}) {
     }
     
     return (
-        <div className="ui three cards">
+        <Card.Group itemsPerRow={3}>
             {newTeam.map((member, index) => (
                 <PokemonCard 
                 key={member.name + index} 
@@ -40,7 +40,7 @@ function TeamDisp({teamArr, saveEdits, teamId, deleteTeam, canDelete}) {
             <button onClick={handleDeleteTeam}>Delete this team?</button> :
             null
             }
-        </div>    
+        </Card.Group>    
     )
 }
 
