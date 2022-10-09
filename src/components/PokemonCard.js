@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import { Card } from "semantic-ui-react";
+import { Card, Image } from "semantic-ui-react";
 import SubCard from "./SubCard.js"
 import Selector from "./Selector.js"
 import '../App.css';
@@ -20,8 +20,8 @@ function PokemonCard({pokemonData, editable, onEditTeam, index}) {
     return (
         <Card>
             <div onClick={handleClick}>
-                <h2>{pokeName}</h2>
-                <img src={pokemonData.sprites.front} alt={pokeName} className={'pokemonpic'}/>
+                <strong>{pokeName}</strong>
+                <Image src={pokemonData.sprites.front} alt={pokeName} className={'pokemonpic'}/>
                 {
                 dispExtra ? 
                 <SubCard pokemonData={pokemonData} /> :

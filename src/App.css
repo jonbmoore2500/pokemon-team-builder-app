@@ -8,9 +8,11 @@
   
 }
 
-.pokemonpic{
-  max-width: 150px
-}
+/* .ui.image{
+  max-width: 200px;
+  display: flex;
+  justify-content: center;
+} */
 
 
 .nav{
@@ -22,6 +24,23 @@
 
 .App {
   text-align: center;
+}
+
+.ui.card,
+.ui.cards>.card {
+  background-color:aquamarine;
+}
+
+.buttonsDiv{
+  
+  width:100%
+}
+
+.button{
+  width:30%;
+  text-align: center;
+  display:grid;
+  float:left
 }
 
 /* 

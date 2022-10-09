@@ -34,12 +34,14 @@ function TeamDisp({teamArr, saveEdits, teamId, deleteTeam, canDelete}) {
                 editable={true}
                 onEditTeam={handleNewPokemon}/>
             ))}
-            <button onClick={handleSaveEdits}>Save changes?</button>
-            {
-            canDelete ? 
-            <button onClick={handleDeleteTeam}>Delete this team?</button> :
-            null
-            }
+            <div className="buttonsDiv">
+                <button onClick={handleSaveEdits} className="button">Save changes?</button>
+                {
+                canDelete ? 
+                <button onClick={handleDeleteTeam} className="button">Delete this team?</button> :
+                null
+                }
+            </div>
         </Card.Group>    
     )
 }

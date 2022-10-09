@@ -18,7 +18,7 @@ function Selector({onSelectNew}) {
     return (
         <div>
             <label>
-                <h3>Choose a pokemon:</h3>
+                <h4>Choose a pokemon:</h4>
                 <select onChange={handleOnChange}>
                     <option id="placeholder">Choose a pokemon!</option>
                     {pokemonArr.map((pokemon) => (

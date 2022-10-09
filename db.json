@@ -1923,28 +1923,27 @@
           ]
         },
         {
-          "id": 144,
-          "name": "articuno",
-          "hp": 90,
+          "id": 10,
+          "name": "caterpie",
+          "hp": 45,
           "sprites": {
-            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png",
-            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/144.png"
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/10.png"
           },
           "types": [
-            "ice",
-            "flying"
+            "bug"
           ]
         },
         {
-          "id": 120,
-          "name": "staryu",
-          "hp": 30,
+          "id": 4,
+          "name": "charmander",
+          "hp": 39,
           "sprites": {
-            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/120.png",
-            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/120.png"
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/4.png"
           },
           "types": [
-            "water"
+            "fire"
           ]
         },
         {

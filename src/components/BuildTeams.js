@@ -3,6 +3,7 @@ import {useHistory} from "react-router-dom"
 import TeamDisp from "./TeamDisp"
 import PokeBall from "../pokeballSprite.png"
 import {TeamSizeContext} from "../contexts/PokemonContext.js"
+import { Container } from "semantic-ui-react"
 
 function BuildTeams() {
     const [teamName, setTeamName] = useState('')
@@ -57,10 +58,13 @@ function BuildTeams() {
                 <h3>Name: </h3>
                 <input className="newName" onChange={handleNewName}/>
             </label>
-            <TeamDisp 
-            teamArr={blankTeam}
-            saveEdits={handleSaveTeam}
-            />
+            <br></br>
+            <Container>
+                <TeamDisp 
+                teamArr={blankTeam}
+                saveEdits={handleSaveTeam}
+                />
+            </Container>
         </div>
     )
 }

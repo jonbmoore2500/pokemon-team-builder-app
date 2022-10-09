@@ -15,11 +15,11 @@ function Explore() {
 
 
     return (
-        <div className="ui container">
+        <Container>
             <h1>Learn about the available pokemon here</h1>
             <Filter onTypeFilterChange={onTypeFilterChange}/>
             <PokemonDisp pokemonArr={displayArr}/>
-        </div>
+        </Container>
     )
 }
 

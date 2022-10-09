@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react"
 import TeamDisp from "./TeamDisp.js"
-
+import { Container } from "semantic-ui-react"
 
 function ViewTeams() {
     const [teamsArr, setTeamsArr] = useState([])
@@ -54,6 +54,7 @@ function ViewTeams() {
                     canDelete={true}
                     deleteTeam={deleteTeam}
                     />
+                    <h1></h1>
                 </div>
             ))}
         </Container>
