@@ -14,14 +14,12 @@ function PokemonCard({pokemonData, editable, onEditTeam, index}) {
         }
     }
     function onSelectNew(newValue) {
-        const oldValueId = pokemonData.id
-        // pass index instead, use index to replace the specific part of old array
         onEditTeam(index, newValue)
     }
     
     return (
-        <Card onClick={handleClick} >
-            <div className={'pokeCard'}>
+        <Card>
+            <div className="column pokeCard"  onClick={handleClick}>
                 <h2>{pokeName}</h2>
                 <img src={pokemonData.sprites.front} alt={pokeName} className={'pokemonpic'}/>
                 {

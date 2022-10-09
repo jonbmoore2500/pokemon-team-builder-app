@@ -25,7 +25,7 @@ function TeamDisp({teamArr, saveEdits, teamId, deleteTeam, canDelete}) {
     }
     
     return (
-        <Card.Group itemsPerRow={3}>
+        <Card.Group>
             {newTeam.map((member, index) => (
                 <PokemonCard 
                 key={member.name + index} 

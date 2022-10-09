@@ -7,13 +7,13 @@ function Explore() {
     const {pokemonArr} = useContext(PokemonContext)
 
     return (
-        <Container>
+        <div className="ui container">
             <h1>Learn about the available pokemon here</h1>
             {/* add filter? 
             alphabetical? reverse alphabetical? type? hp? favorite (persistent or not)? can evolve?
             */}
             <PokemonDisp pokemonArr={pokemonArr}/>
-        </Container>
+        </div>
     )
 }
 
