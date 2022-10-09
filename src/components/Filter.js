@@ -1,10 +1,10 @@
 import React from "react"
 
-function Filter({onFilterChange}) {
+function Filter({onTypeFilterChange}) {
 
 
-    function handleFilter(e) {
-        onFilterChange(e.target.value)
+    function handleTypeFilter(e) {
+        onTypeFilterChange(e.target.value)
     }
 
     return (
@@ -12,8 +12,8 @@ function Filter({onFilterChange}) {
             <div className="ui icon label">
                 <label>
                     <h3>Filter by type: </h3>
-                    <select onChange={handleFilter}>
-                        <option value="placeholder">all</option>  
+                    <select onChange={handleTypeFilter}>
+                        <option value="all">all</option>  
                         <option value="normal">normal</option>
                         <option value="fire">fire</option>
                         <option value="water">water</option>

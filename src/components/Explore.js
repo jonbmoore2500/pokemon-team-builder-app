@@ -6,18 +6,18 @@ import Filter from "./Filter.js"
 
 function Explore() {
     const {pokemonArr} = useContext(PokemonContext)
-    const [filterVal, setFilterVal] = useState('all')
-    const displayArr = pokemonArr.filter((pokemon) => filterVal === 'all' || pokemon.types.find(type => type === filterVal))
+    const [typeFilterVal, setTypeFilterVal] = useState('all')
+    const displayArr = pokemonArr.filter((pokemon) => typeFilterVal === 'all' || pokemon.types.find(type => type === typeFilterVal))
     
-    function onFilterChange(typeToFilter) {
-        setFilterVal(typeToFilter)
+    function onTypeFilterChange(typeToFilter) {
+        setTypeFilterVal(typeToFilter)
     }
 
 
     return (
         <div className="ui container">
             <h1>Learn about the available pokemon here</h1>
-            <Filter onFilterChange={onFilterChange}/>
+            <Filter onTypeFilterChange={onTypeFilterChange}/>
             <PokemonDisp pokemonArr={displayArr}/>
         </div>
     )
