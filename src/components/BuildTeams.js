@@ -56,7 +56,7 @@ function BuildTeams() {
             <h1>Build a new team here</h1>
             <label>
                 <h3>Name: </h3>
-                <input className="newName" onChange={handleNewName}/>
+                <input className="newName" onChange={handleNewName} value={teamName}/>
             </label>
             <br></br>
             <Container>

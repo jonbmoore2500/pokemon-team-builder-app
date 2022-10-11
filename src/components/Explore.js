@@ -17,7 +17,7 @@ function Explore() {
     return (
         <Container>
             <h1>Learn about the available pokemon here</h1>
-            <Filter onTypeFilterChange={onTypeFilterChange}/>
+            <Filter onTypeFilterChange={onTypeFilterChange} value={typeFilterVal}/>
             <PokemonDisp pokemonArr={displayArr}/>
         </Container>
     )

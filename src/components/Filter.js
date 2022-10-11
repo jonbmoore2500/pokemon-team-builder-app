@@ -1,8 +1,8 @@
 import React from "react"
 
-function Filter({onTypeFilterChange}) {
+function Filter({onTypeFilterChange, value}) {
 
-
+    // can add additional filtering options. alphabetically, search by name, hp, etc. 
     function handleTypeFilter(e) {
         onTypeFilterChange(e.target.value)
     }
@@ -12,7 +12,7 @@ function Filter({onTypeFilterChange}) {
             <div className="ui icon label">
                 <label>
                     <h3>Filter by type: </h3>
-                    <select onChange={handleTypeFilter}>
+                    <select onChange={handleTypeFilter} value={value}>
                         <option value="all">all</option>  
                         <option value="normal">normal</option>
                         <option value="fire">fire</option>

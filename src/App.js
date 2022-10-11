@@ -9,11 +9,11 @@ import {PokemonContext, TeamSizeContext} from "./contexts/PokemonContext.js"
 import './App.css';
 
 function App() {
-  // set base pokemon array, team size, for use by Context
+
   const [pokemonArr, setPokemonArr] = useState([])
   const [teamSize, setTeamSize] = useState(6)
   
-  // fetch pokemon, assign to pokemonArr with state
+  
   useEffect(() => {
     fetch('http://localhost:3000/pokemon')
     .then(resp => resp.json())

@@ -8,11 +8,11 @@
   
 }
 
-/* .ui.image{
-  max-width: 200px;
-  display: flex;
-  justify-content: center;
-} */
+.ui.image{
+  width: 60%;
+  display:block;
+    margin:auto;
+}
 
 
 .nav{
@@ -29,6 +29,7 @@
 .ui.card,
 .ui.cards>.card {
   background-color:aquamarine;
+  justify-content: center;
 }
 
 .buttonsDiv{

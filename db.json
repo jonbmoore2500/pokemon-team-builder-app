@@ -2087,87 +2087,43 @@
       "name": "Blue",
       "pokemon": [
         {
-          "id": 7,
-          "name": "squirtle",
-          "hp": 44,
+          "id": 26,
+          "name": "raichu",
+          "hp": 60,
           "sprites": {
-            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
-            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/7.png"
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/26.png"
           },
           "types": [
-            "water"
+            "electric"
           ]
         },
         {
-          "id": 29,
-          "name": "nidoran-f",
-          "hp": 55,
+          "id": 11,
+          "name": "metapod",
+          "hp": 50,
           "sprites": {
-            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/29.png",
-            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/29.png"
-          },
-          "types": [
-            "poison"
-          ]
-        },
-        {
-          "id": 147,
-          "name": "dratini",
-          "hp": 41,
-          "sprites": {
-            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/147.png",
-            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/147.png"
-          },
-          "types": [
-            "dragon"
-          ]
-        }
-      ],
-      "id": 5
-    },
-    {
-      "name": "Lexasaurus",
-      "pokemon": [
-        {
-          "id": 10,
-          "name": "caterpie",
-          "hp": 45,
-          "sprites": {
-            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png",
-            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/10.png"
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/11.png"
           },
           "types": [
             "bug"
           ]
         },
         {
-          "id": 2,
-          "name": "ivysaur",
-          "hp": 60,
+          "id": 30,
+          "name": "nidorina",
+          "hp": 70,
           "sprites": {
-            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
-            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/2.png"
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/30.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/30.png"
           },
           "types": [
-            "grass",
             "poison"
-          ]
-        },
-        {
-          "id": 31,
-          "name": "nidoqueen",
-          "hp": 90,
-          "sprites": {
-            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/31.png",
-            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/31.png"
-          },
-          "types": [
-            "poison",
-            "ground"
           ]
         }
       ],
-      "id": 6
+      "id": 5
     }
   ]
 }
