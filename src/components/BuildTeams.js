@@ -1,66 +1,83 @@
-import React, {useState, useContext} from "react"
-import {useHistory} from "react-router-dom"
+import React, {useState, useContext, useEffect} from "react"
 import TeamDisp from "./TeamDisp"
-import PokeBall from "../pokeballSprite.png"
-import {TeamSizeContext} from "../contexts/PokemonContext.js"
+import TeamForm from './TeamForm.js'
 import { Container } from "semantic-ui-react"
 
 function BuildTeams() {
-    const [teamName, setTeamName] = useState('')
-    const {teamSize} = useContext(TeamSizeContext)
-    let history = useHistory()
+    const [teamsArr, setTeamsArr] = useState([])
+    useEffect(() => {
+        fetch('http://localhost:3000/teams')
+        .then(r => r.json())
+        .then(data => setTeamsArr(data))
+    }, [])
     
-    function handleNewName(e) {
-        setTeamName(e.target.value)
+    const [resetKey, setResetKey] = useState(0)
+    function handleSubmitForm(newPokemon) {
+        fetch('http://localhost:3000/teams', {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newPokemon)
+        })
+        .then(r => r.json())
+        .then(data => {
+            setTeamsArr([data, ...teamsArr])
+            setResetKey(resetKey + 1)
+        })
     }
-    function handleSaveTeam(newTeamArr) {
-        if (
-            (newTeamArr.filter(pokemon => typeof pokemon.id !== 'string').length == teamSize) &&
-            (teamName.length >= 1)
-        ) {
-            const newPokeObj = {
-                "name": teamName,
-                "pokemon": newTeamArr
-            }
-            fetch('http://localhost:3000/teams', {
-                method: "POST",
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(newPokeObj)
+
+    function handleSaveEdits(updateTeam, teamId) {
+        fetch(`http://localhost:3000/teams/${teamId}`, {
+            method: "PATCH",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({pokemon: updateTeam})
+        })
+        .then(r => r.json())
+        .then(data => {
+            const newTeamsArr = teamsArr.map((team) => {
+                if (team.id === data.id) {
+                    team = data
+                }
+                return team
             })
-            .then(r => r.json())
-            .then(() => history.push("/ViewTeams"))
-        } 
+            setTeamsArr(newTeamsArr)
+        })
     }
-    const templateBlankTeam = [
-        {"id": 'a', "name": "Choose your first Pokemon", "sprites": {"front": PokeBall}},
-        {"id": 'b', "name": "Choose your second Pokemon", "sprites": {"front": PokeBall}},
-        {"id": 'c', "name": "Choose your third Pokemon", "sprites": {"front": PokeBall}},
-        {"id": 'd', "name": "Choose your fourth Pokemon", "sprites": {"front": PokeBall}},
-        {"id": 'e', "name": "Choose your fifth Pokemon", "sprites": {"front": PokeBall}},
-        {"id": 'f', "name": "Choose your sixth Pokemon", "sprites": {"front": PokeBall}},
-        {"id": 'g', "name": "Choose your seventh Pokemon", "sprites": {"front": PokeBall}},
-        {"id": 'h', "name": "Choose your eighth Pokemon", "sprites": {"front": PokeBall}},
-        {"id": 'i', "name": "Choose your ninth Pokemon", "sprites": {"front": PokeBall}},
-        {"id": 'j', "name": "Choose your tenth Pokemon", "sprites": {"front": PokeBall}}
-    ]
-    // sets blankTeam to match teamSize, pass to TeamDisp component
-    const blankTeam = templateBlankTeam.slice(0, teamSize)
-    
+
+    function deleteTeam(idToDelete) {
+        fetch(`http://localhost:3000/teams/${idToDelete}`, {
+            method: "DELETE"
+        })
+        .then(r => r.json())
+        .then(() => {
+            const newTeamsArr = teamsArr.filter(team => team.id !== idToDelete)
+            setTeamsArr(newTeamsArr)
+        })
+    }
+   
+
+
     return (
         <div>
-            <h1>Build a new team here</h1>
-            <label>
-                <h3>Name: </h3>
-                <input className="newName" onChange={handleNewName} value={teamName}/>
-            </label>
-            <br></br>
+            <TeamForm onSubmitForm={handleSubmitForm} key={resetKey}/>
             <Container>
-                <TeamDisp 
-                teamArr={blankTeam}
-                saveEdits={handleSaveTeam}
-                />
+                <h2>View and edit your teams here!</h2>
+                {teamsArr.map((team) => (
+                    <div key={team.id + team.name}>
+                        <h3>{team.name}</h3>
+                        <TeamDisp 
+                        teamArr={team.pokemon} 
+                        teamId={team.id} 
+                        saveEdits={handleSaveEdits}
+                        canDelete={true}
+                        deleteTeam={deleteTeam}
+                        />
+                        <h1></h1>
+                    </div>
+                ))}
             </Container>
         </div>
     )

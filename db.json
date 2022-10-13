@@ -1899,15 +1899,16 @@
           ]
         },
         {
-          "id": 9,
-          "name": "blastoise",
-          "hp": 79,
+          "id": 2,
+          "name": "ivysaur",
+          "hp": 60,
           "sprites": {
-            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
-            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/9.png"
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/2.png"
           },
           "types": [
-            "water"
+            "grass",
+            "poison"
           ]
         },
         {
@@ -2126,7 +2127,7 @@
       "id": 5
     },
     {
-      "name": "testing team 3",
+      "name": "test reset",
       "pokemon": [
         {
           "id": 1,
@@ -2142,28 +2143,27 @@
           ]
         },
         {
-          "id": 29,
-          "name": "nidoran-f",
-          "hp": 55,
+          "id": 5,
+          "name": "charmeleon",
+          "hp": 58,
           "sprites": {
-            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/29.png",
-            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/29.png"
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/5.png"
           },
           "types": [
-            "poison"
+            "fire"
           ]
         },
         {
-          "id": 3,
-          "name": "venusaur",
-          "hp": 80,
+          "id": 9,
+          "name": "blastoise",
+          "hp": 79,
           "sprites": {
-            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
-            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/3.png"
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/9.png"
           },
           "types": [
-            "grass",
-            "poison"
+            "water"
           ]
         }
       ],

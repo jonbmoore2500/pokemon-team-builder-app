@@ -19,14 +19,11 @@ function RandomPokemon() {
         <Container>
             <h1>Let us make some recommendations:</h1>
             <Card.Group itemsPerRow={1}>
-                {typeof randomPokeObj === "object" ? 
-                <PokemonCard 
-                pokemonData={randomPokeObj}
-                /> :
+                {
+                typeof randomPokeObj === "object" ? 
+                <PokemonCard pokemonData={randomPokeObj}/> :
                 null
-            
-            
-            }
+                }
             </Card.Group>
         </Container>
     )
