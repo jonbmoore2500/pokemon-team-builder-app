@@ -5,15 +5,11 @@ function Selector({onSelectNew}) {
     const {pokemonArr} = useContext(PokemonContext)
     
     function handleOnChange(e) {
-        // creates placeholder, prevents placeholder from being used as value
         if (e.target.value.slice(-1) !== '!') {
             onSelectNew(e.target.value)
         }    
-        
     }
-    
-// need to prevent duplicates either here or in function in TeamDisp
-// only display selector on click?
+
 
     return (
         <div>

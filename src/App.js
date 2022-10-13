@@ -5,6 +5,7 @@ import Home from "./components/Home.js"
 import Explore from "./components/Explore.js"
 import BuildTeams from "./components/BuildTeams.js"
 import ViewTeams from "./components/ViewTeams.js"
+import RandomPokemon from "./components/RandomPokemon.js"
 import {PokemonContext, TeamSizeContext} from "./contexts/PokemonContext.js"
 import './App.css';
 
@@ -38,11 +39,11 @@ function App() {
           <Route exact path="/Explore">
             <Explore />
           </Route>
+          <Route exact path="/Random">
+            <RandomPokemon />
+          </Route>
           <Route exact path="/BuildTeams">
             <BuildTeams />
-          </Route>
-          <Route exact path="/ViewTeams">
-            <ViewTeams />
           </Route>
         </PokemonContext.Provider>
         </TeamSizeContext.Provider>

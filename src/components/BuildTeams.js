@@ -15,9 +15,7 @@ function BuildTeams() {
     }
     function handleSaveTeam(newTeamArr) {
         if (
-            // checks to make sure all slots are filled by actual pokemon and not placeholders
             (newTeamArr.filter(pokemon => typeof pokemon.id !== 'string').length == teamSize) &&
-            // checks to make sure a name has been entered, name cannot be blank
             (teamName.length >= 1)
         ) {
             const newPokeObj = {
@@ -35,7 +33,6 @@ function BuildTeams() {
             .then(() => history.push("/ViewTeams"))
         } 
     }
-    // creates template for blank team with all 10 spots
     const templateBlankTeam = [
         {"id": 'a', "name": "Choose your first Pokemon", "sprites": {"front": PokeBall}},
         {"id": 'b', "name": "Choose your second Pokemon", "sprites": {"front": PokeBall}},

@@ -2099,15 +2099,15 @@
           ]
         },
         {
-          "id": 11,
-          "name": "metapod",
-          "hp": 50,
+          "id": 30,
+          "name": "nidorina",
+          "hp": 70,
           "sprites": {
-            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png",
-            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/11.png"
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/30.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/30.png"
           },
           "types": [
-            "bug"
+            "poison"
           ]
         },
         {
@@ -2124,6 +2124,50 @@
         }
       ],
       "id": 5
+    },
+    {
+      "name": "testing team 3",
+      "pokemon": [
+        {
+          "id": 1,
+          "name": "bulbasaur",
+          "hp": "40",
+          "sprites": {
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png"
+          },
+          "types": [
+            "grass",
+            "poison"
+          ]
+        },
+        {
+          "id": 29,
+          "name": "nidoran-f",
+          "hp": 55,
+          "sprites": {
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/29.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/29.png"
+          },
+          "types": [
+            "poison"
+          ]
+        },
+        {
+          "id": 3,
+          "name": "venusaur",
+          "hp": 80,
+          "sprites": {
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/3.png"
+          },
+          "types": [
+            "grass",
+            "poison"
+          ]
+        }
+      ],
+      "id": 6
     }
   ]
 }
