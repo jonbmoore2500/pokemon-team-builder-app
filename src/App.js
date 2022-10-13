@@ -4,7 +4,6 @@ import Header from "./components/Header.js"
 import Home from "./components/Home.js"
 import Explore from "./components/Explore.js"
 import BuildTeams from "./components/BuildTeams.js"
-import ViewTeams from "./components/ViewTeams.js"
 import RandomPokemon from "./components/RandomPokemon.js"
 import {PokemonContext, TeamSizeContext} from "./contexts/PokemonContext.js"
 import './App.css';

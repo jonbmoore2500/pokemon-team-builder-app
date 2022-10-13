@@ -2125,49 +2125,6 @@
         }
       ],
       "id": 5
-    },
-    {
-      "name": "test reset",
-      "pokemon": [
-        {
-          "id": 1,
-          "name": "bulbasaur",
-          "hp": "40",
-          "sprites": {
-            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
-            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png"
-          },
-          "types": [
-            "grass",
-            "poison"
-          ]
-        },
-        {
-          "id": 5,
-          "name": "charmeleon",
-          "hp": 58,
-          "sprites": {
-            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
-            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/5.png"
-          },
-          "types": [
-            "fire"
-          ]
-        },
-        {
-          "id": 9,
-          "name": "blastoise",
-          "hp": 79,
-          "sprites": {
-            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
-            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/9.png"
-          },
-          "types": [
-            "water"
-          ]
-        }
-      ],
-      "id": 6
     }
   ]
 }

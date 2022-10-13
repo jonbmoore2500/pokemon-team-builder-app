@@ -21,7 +21,7 @@ function RandomPokemon() {
             <Card.Group itemsPerRow={1}>
                 {
                 typeof randomPokeObj === "object" ? 
-                <PokemonCard pokemonData={randomPokeObj}/> :
+                <PokemonCard pokemonData={randomPokeObj} /> :
                 null
                 }
             </Card.Group>
