@@ -110,6 +110,10 @@ This app utilizes the PokemonContext.js file to store 2 contexts - PokemonContex
  - TeamSizeContext - the size of a new team. Set in SetTeamSize, displayed there and used to create the proper number of placeholder cards in the TeamForm component.
 
 
+## Data
+
+The db.json file is included in the repository, use npm run server to locally host it in order to access pokemon and teams.
+
 
 ## Routing
 
