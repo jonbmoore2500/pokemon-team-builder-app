@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react"
 import PokemonCard from "./PokemonCard"
-import { Container, Card } from "semantic-ui-react";
+import { Card } from "semantic-ui-react";
 import {PokemonContext} from "../contexts/PokemonContext.js"
 
 function TeamDisp({teamArr, saveEdits, teamId, deleteTeam, canDelete}) {

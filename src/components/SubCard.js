@@ -9,7 +9,6 @@ function SubCard({pokemonData}) {
             <h4>Type: {pokemonData.types}</h4>
             }
             <h4>HP: {pokemonData.hp}</h4>
-            {/* <h3>Evolvable:<br></br>Functionality to be added</h3> */}
         </div>
     )
 }

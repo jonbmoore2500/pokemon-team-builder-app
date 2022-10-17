@@ -20,12 +20,10 @@ function App() {
     .then(data => setPokemonArr(data))
   }, [])
   
-  // take newSize from Home component, set teamSize with state
   function handleSetSize(newSize) {
     setTeamSize(newSize)
   }
 
-  // can incorporate different Context.Providers together?
   return (
     <div className="App">
       <Header />

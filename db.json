@@ -1886,16 +1886,16 @@
       "name": "Jon's Favorite Team",
       "pokemon": [
         {
-          "id": 141,
-          "name": "kabutops",
-          "hp": 60,
+          "id": 1,
+          "name": "bulbasaur",
+          "hp": "40",
           "sprites": {
-            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/141.png",
-            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/141.png"
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png"
           },
           "types": [
-            "rock",
-            "water"
+            "grass",
+            "poison"
           ]
         },
         {

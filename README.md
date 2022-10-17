@@ -1,70 +1,142 @@
-# Getting Started with Create React App
+# Pokemon Team Builder Read Me
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+The Pokemon Team Builder allows a user to set a team size, explore the available pokemon (including with the option to filter by type), get random pokemon suggestions, and build, edit, and delete teams of pokemon. All team edits are stored in a RESTful API, meaning that new teams, as well as the editing and/or deletion of old teams, is maintained.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Components
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+App
+ - Handles initial GET fetch request
+ - Provides context to all route options
 
-### `npm test`
+Header
+ - Contains app title
+ - Displays NavBar
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+NavBar
+ - Provides links to different routes for purposes of client side routing
 
-### `npm run build`
+Home
+ - Displays welcome information
+ - Contains SetTeamSize component as a child
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+SetTeamSize
+ - Allows the user to set the size of a team, pass that value up to App for use with TeamSizeContext
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Explore
+ - Contains title and components to display all available pokemon cards, filter those cards
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Filter
+ - Allows the user to filter the cards displayed in Explore based on type
 
-### `npm run eject`
+PokemonDisp
+ - Container for PokemonCard components
+ - Contains PokemonCards for all available pokemon available to be displayed
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+PokemonCard
+ - Contains all necessary data for a pokemon in a Semantic UI card
+ - Can display SubCard or Selector subcomponents depending on certain parameters
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+SubCard
+ - Contains HP and type data for pokemon
+ - Displays on card click in /explore and /random routes
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+RandomPokemon
+ - Displays a single PokemonCard containing a random pokemon that changes every few seconds
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+BuildTeams
+ - Contains the TeamForm and displays all new and preexisting teams
 
-## Learn More
+TeamForm
+ - Allows the user to set a team name, replace all placeholder pokeballs with pokemon, and save the new team
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+TeamDisp
+ - Similar to PokemonDisp, displays a PokemonCard for each pokemon in a given team
+ - Include delete and save buttons under certain conditions, deleting or saving the team
+ - Each PokemonCard contains the Selector component to change its value
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Selector
+ - Contains a dropdown menu with an option for each available pokemon
+ - Allows the user to replace the pokemon in a team
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Component Flow
+└── App
+    ├── Header
+    |   └── NavBar
+    |
+    ├── Home
+    |   └── SetTeamSize
+    ├── Explore
+    |   ├── Filter
+    |   └── PokemonDisp
+    |        ├─ PokemonCard
+    |        |  └── SubCard
+    |        └─ PokemonCard (for each available pokemon)
+    |           └── SubCard
+    ├── RandomPokemon
+    |   └─ PokemonCard
+    |       └── SubCard
+    └── BuildTeams
+        ├── TeamForm
+        |   └── TeamDisp
+        |        ├─ PokemonCard
+        |        |  └── Selector
+        |        └─ PokemonCard (to equal team size from SetTeamSize)
+        |           └── Selector
+        ├── TeamDisp
+        |   ├─ PokemonCard
+        |   |  └── Selector
+        |   └─ PokemonCard (for each pokemon in team)
+        |      └── Selector
+        └── TeamDisp (for each saved team)
+            ├─ PokemonCard
+            |  └── Selector
+            └─ PokemonCard (for each pokemon in team)
+               └── Selector
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Context
 
-### Making a Progressive Web App
+This app utilizes the PokemonContext.js file to store 2 contexts - PokemonContext and TeamSizeContext
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+ - PokemonContext - the array of available pokemon. Used to create cards and populate Explore, be options for RandomPokemon, and populate the dropdown menu in Selector component with options for team members.
+ - TeamSizeContext - the size of a new team. Set in SetTeamSize, displayed there and used to create the proper number of placeholder cards in the TeamForm component.
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## Routing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The app uses client-side routing with four routes:
 
-### `npm run build` fails to minify
+Home - "/"
+ - Explains the basic functionality of the app and allows the user to set a team size
+Explore - "/explore"
+ - Allows the user to view all the pokemon options
+ - Display extra information on clicking a card
+ - Filter the options by type with a dropdown menu
+Get a Recommendation - "/random"
+ - Shows the user a new random pokemon from the available set every few seconds
+Build a Team = "/buildteams"
+ - Displays a new team form with the team size set in Home
+ - Allows the user to create and name a team, then save it with a PUSH fetch command
+ - Allows the user to edit team members from preexisting teams, with edits saved via a PATCH fetch command
+ - Allows the user to edit existing teams via a DELETE fetch command
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Roadmap
+
+Potential future features:
+ - Add additional filter options to explore page (HP, alphabetically, ability to evolve, etc)
+ - Edit team names in addition to team makeup
+ - Add new members to old teams, delete individual members from old teams without replacing with a new pokemon
+ - Allow users building a team to specify what types they want to be strong against, warning the user if they don't meet a certain threshold of specific types in their teams
+
+
+ ## Acknowledgements
+
+ Thank you to Nintendo, Game Freak, and Creatures (The Pokemon Company) for coming up with the various Pokemon, Professor Oak, and the Pokeball. 
+ Thank you to the PokeAPI for maintaining the various sprites used for the Pokemon. (https://github.com/PokeAPI)

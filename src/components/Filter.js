@@ -2,7 +2,7 @@ import React from "react"
 
 function Filter({onTypeFilterChange, value}) {
 
-    // can add additional filtering options. alphabetically, search by name, hp, etc. 
+    
     function handleTypeFilter(e) {
         onTypeFilterChange(e.target.value)
     }

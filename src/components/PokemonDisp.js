@@ -4,8 +4,7 @@ import { Card } from "semantic-ui-react";
 
 function PokemonDisp({pokemonArr}) {
     
-{/* use state and a timer to switch between true and 
-false, use to toggle front/back view for selected card */}
+
     return (
         <Card.Group itemsPerRow={6}>
             {pokemonArr.map((pokemon) => (
