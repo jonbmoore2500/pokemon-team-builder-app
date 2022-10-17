@@ -64,6 +64,9 @@ Selector
 
 
 ## Component Flow
+
+(please open in a text editor for proper formatting, I will look into a GitHub-friendly format in the future)
+
 └── App
     ├── Header
     |   └── NavBar
