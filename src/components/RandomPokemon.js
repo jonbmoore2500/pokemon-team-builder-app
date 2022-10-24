@@ -13,7 +13,9 @@ function RandomPokemon() {
         setInterval(() => {
             setRandNum(Math.floor(Math.random() * 151))
         }, 5000)
-    }, [])
+    }, []) 
+
+    // handle unmount, cleanup function
 
     return (
         <Container>

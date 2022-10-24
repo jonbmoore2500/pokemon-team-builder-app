@@ -2057,15 +2057,16 @@
           ]
         },
         {
-          "id": 5,
-          "name": "charmeleon",
-          "hp": 58,
+          "id": 1,
+          "name": "bulbasaur",
+          "hp": "40",
           "sprites": {
-            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
-            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/5.png"
+            "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+            "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png"
           },
           "types": [
-            "fire"
+            "grass",
+            "poison"
           ]
         },
         {
